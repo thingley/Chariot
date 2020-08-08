@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29709.97
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "TPH.Chariot.Database", "TPH.Chariot.Database\TPH.Chariot.Database.sqlproj", "{E66C93A2-1911-40FA-ACB7-C2953EE23BB5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E66C93A2-1911-40FA-ACB7-C2953EE23BB5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E66C93A2-1911-40FA-ACB7-C2953EE23BB5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E66C93A2-1911-40FA-ACB7-C2953EE23BB5}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{E66C93A2-1911-40FA-ACB7-C2953EE23BB5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E66C93A2-1911-40FA-ACB7-C2953EE23BB5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E66C93A2-1911-40FA-ACB7-C2953EE23BB5}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0985CE6A-9921-4030-AAD3-81215F34E6CF}
+	EndGlobalSection
+EndGlobal

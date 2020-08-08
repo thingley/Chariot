@@ -1,0 +1,35 @@
+﻿CREATE PROCEDURE [customer].[UP__Table__Customer__Delete]
+	@pCustomerID	BIGINT			OUTPUT
+	, @pRV			ROWVERSION		OUTPUT
+AS
+BEGIN
+	SET NOCOUNT ON;
+	SET XACT_ABORT ON;
+
+	IF (ISNULL(@pCustomerID, 0) = 0)
+		GOTO SPEnd;
+
+	BEGIN TRY
+		SET NOCOUNT OFF;
+		BEGIN TRANSACTION;
+
+		DELETE FROM [customer].[Customer]
+		WHERE ([CustomerID] = @pCustomerID)
+		AND ([RV] = @pRV);
+
+		SET NOCOUNT ON;
+		COMMIT TRANSACTION;
+	END TRY
+	BEGIN CATCH
+		SET NOCOUNT ON;
+		IF (@@TRANCOUNT > 0) ROLLBACK TRANSACTION;
+		THROW;
+	END CATCH
+
+SPEnd:
+	RETURN 0;
+END;
+GO
+
+GRANT EXECUTE ON [customer].[UP__Table__Customer__Delete] TO [CustomerWriter];
+GO
