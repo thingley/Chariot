@@ -1,11 +1,11 @@
 ﻿CREATE TABLE [customer].[Account]
 (
-	[AccountID]			BIGINT			NOT NULL	CONSTRAINT [DF__customer__Account__AccountID] DEFAULT (NEXT VALUE FOR [customer].[SQ__Account])
-	, [RV]				ROWVERSION		NOT NULL
-	, [CustomerID]		BIGINT			NOT NULL
-	, [Code]			[type].[UDT__Code]
-	, [Account]			[type].[UDT__EntityName]
-	, [Active]			BIT				NOT NULL	CONSTRAINT [DF__customer__Account__Active] DEFAULT (0)
+	[AccountID]			BIGINT						NOT NULL	CONSTRAINT [DF__customer__Account__AccountID] DEFAULT (NEXT VALUE FOR [customer].[SQ__Account])
+	, [RV]				ROWVERSION					NOT NULL
+	, [CustomerID]		BIGINT						NOT NULL
+	, [Code]			[type].[UDT__Code]			NOT NULL
+	, [Account]			[type].[UDT__EntityName]	NOT NULL
+	, [Active]			BIT							NOT NULL	CONSTRAINT [DF__customer__Account__Active] DEFAULT (0)
 
 	, CONSTRAINT [PK__customer__Account__AccountID]				PRIMARY KEY CLUSTERED ([AccountID])
 	, CONSTRAINT [FK__customer__Account__CustomerID]			FOREIGN KEY ([CustomerID]) REFERENCES [customer].[Customer] ([CustomerID])

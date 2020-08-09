@@ -1,1 +1,0 @@
-﻿CREATE TYPE [type].[UDT__EntityName] FROM NVARCHAR(100) NOT NULL;

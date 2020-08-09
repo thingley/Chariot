@@ -1,0 +1,1 @@
+﻿CREATE TYPE [type].[UDT__Title] FROM NVARCHAR(50);

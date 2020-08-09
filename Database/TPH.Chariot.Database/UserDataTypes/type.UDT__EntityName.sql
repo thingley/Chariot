@@ -1,0 +1,1 @@
+﻿CREATE TYPE [type].[UDT__EntityName] FROM NVARCHAR(100);

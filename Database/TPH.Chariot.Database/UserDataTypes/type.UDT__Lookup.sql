@@ -1,0 +1,1 @@
+﻿CREATE TYPE [type].[UDT__Lookup] FROM NVARCHAR(20);

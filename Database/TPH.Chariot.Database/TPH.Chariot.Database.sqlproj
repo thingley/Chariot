@@ -22,6 +22,7 @@
     <SqlServerVerification>False</SqlServerVerification>
     <IncludeCompositeObjects>True</IncludeCompositeObjects>
     <TargetDatabaseSet>True</TargetDatabaseSet>
+    <IncludeSchemaNameInFileName>True</IncludeSchemaNameInFileName>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <OutputPath>bin\Release\</OutputPath>
@@ -66,9 +67,10 @@
     <Folder Include="Tables" />
     <Folder Include="UserDataTypes" />
     <Folder Include="Publish" />
+    <Folder Include="UserTableTypes" />
   </ItemGroup>
   <ItemGroup>
-    <Build Include="FileGroups\FG__Indexes.sql" />
+    <Build Include="FileGroups\FG__INDEXES.sql" />
     <Build Include="Procedures\customer.UP__Table__Account__Insert.sql" />
     <Build Include="Procedures\customer.UP__Table__Customer__Delete.sql" />
     <Build Include="Procedures\customer.UP__Table__Customer__Insert.sql" />
@@ -83,10 +85,34 @@
     <Build Include="Tables\customer.Account.sql" />
     <Build Include="Tables\customer.Customer.sql" />
     <Build Include="Schemas\customer.sql" />
-    <Build Include="UserDataTypes\UDT__Code.sql" />
+    <Build Include="UserDataTypes\type.UDT__Code.sql" />
     <Build Include="Schemas\type.sql" />
-    <Build Include="UserDataTypes\UDT__Lookup.sql" />
-    <Build Include="UserDataTypes\UDT__EntityName.sql" />
+    <Build Include="UserDataTypes\type.UDT__Lookup.sql" />
+    <Build Include="UserDataTypes\type.UDT__EntityName.sql" />
+    <Build Include="Tables\customer.Profile.sql" />
+    <Build Include="Tables\customer.ProfileAddress.sql" />
+    <Build Include="Tables\data.Address.sql" />
+    <Build Include="Tables\data.ContactDetails.sql" />
+    <Build Include="Tables\data.Person.sql" />
+    <Build Include="Sequences\customer.SQ__Profile.sql" />
+    <Build Include="Sequences\customer.SQ__ProfileAddress.sql" />
+    <Build Include="Sequences\data.SQ__Address.sql" />
+    <Build Include="Sequences\data.SQ__ContactDetails.sql" />
+    <Build Include="Sequences\data.SQ__Person.sql" />
+    <Build Include="Schemas\data.sql" />
+    <Build Include="Schemas\system.sql" />
+    <Build Include="Schemas\service.sql" />
+    <Build Include="Sequences\system.SQ__AddressType.sql" />
+    <Build Include="Sequences\system.SQ__Country.sql" />
+    <Build Include="UserTableTypes\dbo.UTT__PrimaryKeyValues.sql" />
+    <Build Include="Tables\system.AddressType.sql" />
+    <Build Include="Tables\system.Country.sql" />
+    <Build Include="UserTableTypes\dbo.UTT__Profile.sql" />
+    <Build Include="UserDataTypes\type.UDT__Title.sql" />
+    <Build Include="UserDataTypes\type.UDT__TelephoneNumber.sql" />
+    <Build Include="UserDataTypes\type.UDT__EmailAddress.sql" />
+    <Build Include="UserDataTypes\type.UDT__FirstName.sql" />
+    <Build Include="UserDataTypes\type.UDT__LastName.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Publish\HOME.publish.xml" />
