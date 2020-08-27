@@ -9,13 +9,13 @@ BEGIN
 	SET NOCOUNT ON;
 	SET XACT_ABORT ON;
 
-	DECLARE @NextID BIGINT;
+	DECLARE @nextID BIGINT;
 
 	BEGIN TRY
 		IF (ISNULL(@pCustomerID, 0) <= 0)
-			SET @NextID = NEXT VALUE FOR [customer].[SQ__Customer];
+			SET @nextID = NEXT VALUE FOR [customer].[SQ__Customer];
 		ELSE
-			SET @NextID = @pCustomerID;
+			SET @nextID = @pCustomerID;
 
 		SET NOCOUNT OFF;
 		BEGIN TRANSACTION;
@@ -29,7 +29,7 @@ BEGIN
 		)
 		VALUES
 		(
-			@NextID
+			@nextID
 			, @pCode
 			, @pCustomer
 			, @pActive
@@ -45,7 +45,7 @@ BEGIN
 			, @pCustomer = [Customer]
 			, @pActive = [Active]
 		FROM [customer].[Customer]
-		WHERE [CustomerID] = @NextID;
+		WHERE [CustomerID] = @nextID;
 	END TRY
 	BEGIN CATCH
 		SET NOCOUNT ON;
@@ -53,6 +53,7 @@ BEGIN
 		THROW;
 	END CATCH
 
+SPEnd:
 	RETURN 0;
 END;
 GO

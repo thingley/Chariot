@@ -5,6 +5,14 @@ VisualStudioVersion = 16.0.29709.97
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "TPH.Chariot.Database", "TPH.Chariot.Database\TPH.Chariot.Database.sqlproj", "{E66C93A2-1911-40FA-ACB7-C2953EE23BB5}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TPH.Chariot.Data.Legacy.Common.Interfaces", "TPH.Chariot.Data.Legacy.Common.Interfaces\TPH.Chariot.Data.Legacy.Common.Interfaces.csproj", "{CBE8B214-784D-4753-8270-2E668D1F8A40}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TPH.Chariot.Data.Legacy.Common.DataTableFactory", "TPH.Chariot.Data.Legacy.Common.DataTableFactory\TPH.Chariot.Data.Legacy.Common.DataTableFactory.csproj", "{BF71FA7D-ED3B-43AC-9ED9-A3B093A85BFA}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TPH.Chariot.Data.Legacy.DataPortal", "TPH.Chariot.Data.Legacy.DataPortal\TPH.Chariot.Data.Legacy.DataPortal.csproj", "{8AB27B58-FACD-4ACC-90C7-396CBE33EE5F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TPH.Chariot.Data.Legacy.Common.CommandFactory", "TPH.Chariot.Data.Legacy.Common.CommandFactory\TPH.Chariot.Data.Legacy.Common.CommandFactory.csproj", "{7277C756-84BE-44DC-AF45-87AA928FA6CB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,6 +25,22 @@ Global
 		{E66C93A2-1911-40FA-ACB7-C2953EE23BB5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E66C93A2-1911-40FA-ACB7-C2953EE23BB5}.Release|Any CPU.Build.0 = Release|Any CPU
 		{E66C93A2-1911-40FA-ACB7-C2953EE23BB5}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{CBE8B214-784D-4753-8270-2E668D1F8A40}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CBE8B214-784D-4753-8270-2E668D1F8A40}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CBE8B214-784D-4753-8270-2E668D1F8A40}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CBE8B214-784D-4753-8270-2E668D1F8A40}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BF71FA7D-ED3B-43AC-9ED9-A3B093A85BFA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF71FA7D-ED3B-43AC-9ED9-A3B093A85BFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF71FA7D-ED3B-43AC-9ED9-A3B093A85BFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF71FA7D-ED3B-43AC-9ED9-A3B093A85BFA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8AB27B58-FACD-4ACC-90C7-396CBE33EE5F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8AB27B58-FACD-4ACC-90C7-396CBE33EE5F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8AB27B58-FACD-4ACC-90C7-396CBE33EE5F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8AB27B58-FACD-4ACC-90C7-396CBE33EE5F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7277C756-84BE-44DC-AF45-87AA928FA6CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7277C756-84BE-44DC-AF45-87AA928FA6CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7277C756-84BE-44DC-AF45-87AA928FA6CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7277C756-84BE-44DC-AF45-87AA928FA6CB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
