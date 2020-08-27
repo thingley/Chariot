@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="3.1.7" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="3.1.7" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.5.0" />
+    <PackageReference Include="xunit" Version="2.4.0" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.4.0" />
+    <PackageReference Include="coverlet.collector" Version="1.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\TPH.Chariot.Data.Legacy.Common.DataTableFactory\TPH.Chariot.Data.Legacy.Common.DataTableFactory.csproj" />
+    <ProjectReference Include="..\TPH.Chariot.Data.Legacy.Common.Interfaces\TPH.Chariot.Data.Legacy.Common.Interfaces.csproj" />
+    <ProjectReference Include="..\TPH.Chariot.Data.Legacy.DataPortal\TPH.Chariot.Data.Legacy.DataPortal.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="TPH.Chariot.Database.Test.config.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>
