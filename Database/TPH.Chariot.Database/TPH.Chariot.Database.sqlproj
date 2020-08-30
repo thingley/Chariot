@@ -68,6 +68,7 @@
     <Folder Include="UserDataTypes" />
     <Folder Include="Publish" />
     <Folder Include="UserTableTypes" />
+    <Folder Include="Triggers" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="FileGroups\FG__INDEXES.sql" />
@@ -104,10 +105,10 @@
     <Build Include="Schemas\service.sql" />
     <Build Include="Sequences\system.SQ__AddressType.sql" />
     <Build Include="Sequences\system.SQ__Country.sql" />
-    <Build Include="UserTableTypes\dbo.UTT__PrimaryKeyValues.sql" />
+    <Build Include="UserTableTypes\type.UTT__PrimaryKeyValues.sql" />
     <Build Include="Tables\system.AddressType.sql" />
     <Build Include="Tables\system.Country.sql" />
-    <Build Include="UserTableTypes\dbo.UTT__Profile.sql" />
+    <Build Include="UserTableTypes\type.UTT__Profile.sql" />
     <Build Include="UserDataTypes\type.UDT__Title.sql" />
     <Build Include="UserDataTypes\type.UDT__TelephoneNumber.sql" />
     <Build Include="UserDataTypes\type.UDT__EmailAddress.sql" />

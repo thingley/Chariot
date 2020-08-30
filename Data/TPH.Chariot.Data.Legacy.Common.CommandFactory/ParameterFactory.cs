@@ -26,6 +26,7 @@ namespace TPH.Chariot.Data.Legacy.Common.CommandFactory
                 Direction = ParameterDirection.ReturnValue,
             };
         }
+
         internal SqlParameter PrimaryKeyParameter(string parameterName, string sourceColumn, bool forInsert)
         {
             return new SqlParameter()

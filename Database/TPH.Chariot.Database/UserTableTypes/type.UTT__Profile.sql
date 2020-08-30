@@ -1,4 +1,4 @@
-﻿CREATE TYPE [dbo].[UTT__Profile] AS TABLE
+﻿CREATE TYPE [type].[UTT__Profile] AS TABLE
 (
 	[Code]						[type].[UDT__Code]
 	, [Title]					[type].[UDT__Title]
