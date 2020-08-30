@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Text;
 
+using System.Linq;
+
 using TPH.Chariot.Data.Legacy.Common.Interfaces;
 
 namespace TPH.Chariot.Data.Legacy.DataPortal
@@ -13,6 +15,8 @@ namespace TPH.Chariot.Data.Legacy.DataPortal
 		public int RowsUpdated { get; internal set; }
 
 		public IEnumerable<string> ErrorMessages { get; private set; }
+
+		public string FirstErrorMessage { get { return ErrorMessages?.First() ?? string.Empty; } }
 
 		internal DataPortalResult()
 		{

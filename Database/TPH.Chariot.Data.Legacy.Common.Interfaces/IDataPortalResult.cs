@@ -12,5 +12,6 @@ namespace TPH.Chariot.Data.Legacy.Common.Interfaces
 
 		public IEnumerable<string> ErrorMessages { get; }
 
+		public string FirstErrorMessage { get; }
 	}
 }

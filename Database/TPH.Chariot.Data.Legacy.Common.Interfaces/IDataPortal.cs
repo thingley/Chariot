@@ -11,5 +11,7 @@ namespace TPH.Chariot.Data.Legacy.Common.Interfaces
 		string ConnectionString { set; }
 
 		IDataPortalResult Persist__customer__Customer(DataTable customerCustomerDataTable);
+
+		IDataPortalResult Persist__customer__Account(DataTable customerAccountDataTable);
 	}
 }
