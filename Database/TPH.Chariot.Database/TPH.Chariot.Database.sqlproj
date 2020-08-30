@@ -69,6 +69,7 @@
     <Folder Include="Publish" />
     <Folder Include="UserTableTypes" />
     <Folder Include="Triggers" />
+    <Folder Include="DeploymentScripts" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="FileGroups\FG__INDEXES.sql" />
@@ -86,7 +87,6 @@
     <Build Include="Tables\customer.Account.sql" />
     <Build Include="Tables\customer.Customer.sql" />
     <Build Include="Schemas\customer.sql" />
-    <Build Include="UserDataTypes\type.UDT__Code.sql" />
     <Build Include="Schemas\type.sql" />
     <Build Include="UserDataTypes\type.UDT__Lookup.sql" />
     <Build Include="UserDataTypes\type.UDT__EntityName.sql" />
@@ -111,11 +111,26 @@
     <Build Include="UserTableTypes\type.UTT__Profile.sql" />
     <Build Include="UserDataTypes\type.UDT__Title.sql" />
     <Build Include="UserDataTypes\type.UDT__TelephoneNumber.sql" />
-    <Build Include="UserDataTypes\type.UDT__EmailAddress.sql" />
     <Build Include="UserDataTypes\type.UDT__FirstName.sql" />
     <Build Include="UserDataTypes\type.UDT__LastName.sql" />
+    <Build Include="Triggers\customer.TR__Customer.sql" />
+    <Build Include="Tables\system.AuditEntity.sql" />
+    <Build Include="Procedures\system.UP__Publish__UpdateSystemTables.sql" />
+    <Build Include="Roles\SystemWriter.sql" />
+    <Build Include="Procedures\system.UP__Table__AuditEntity__Populate.sql" />
+    <Build Include="UserDataTypes\type.UDT__Code.sql" />
+    <Build Include="UserDataTypes\type.UDT__EmailAddress.sql" />
+    <Build Include="Tables\system.AuditLog.sql" />
+    <Build Include="Sequences\system.SQ__AuditLog.sql" />
+    <Build Include="Schemas\sfunc.sql" />
+    <Build Include="Schemas\tfunc.sql" />
+    <Build Include="ScalarFunctions\sfunc.GetAuditDescriptionForCharacterColumn.sql" />
+    <Build Include="ScalarFunctions\sfunc.GetAuditDescriptionForBooleanColumn.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Publish\HOME.publish.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <PostDeploy Include="DeploymentScripts\Script.PostDeployment.sql" />
   </ItemGroup>
 </Project>
