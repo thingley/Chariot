@@ -5,13 +5,13 @@ VisualStudioVersion = 16.0.29709.97
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "TPH.Chariot.Database", "TPH.Chariot.Database\TPH.Chariot.Database.sqlproj", "{E66C93A2-1911-40FA-ACB7-C2953EE23BB5}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TPH.Chariot.Data.Legacy.Common.Interfaces", "TPH.Chariot.Data.Legacy.Common.Interfaces\TPH.Chariot.Data.Legacy.Common.Interfaces.csproj", "{CBE8B214-784D-4753-8270-2E668D1F8A40}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TPH.Chariot.Data.Legacy.Common.Interfaces", "..\Data\TPH.Chariot.Data.Legacy.Common.Interfaces\TPH.Chariot.Data.Legacy.Common.Interfaces.csproj", "{CBE8B214-784D-4753-8270-2E668D1F8A40}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TPH.Chariot.Data.Legacy.Common.DataTableFactory", "TPH.Chariot.Data.Legacy.Common.DataTableFactory\TPH.Chariot.Data.Legacy.Common.DataTableFactory.csproj", "{BF71FA7D-ED3B-43AC-9ED9-A3B093A85BFA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TPH.Chariot.Data.Legacy.Common.DataTableFactory", "..\Data\TPH.Chariot.Data.Legacy.Common.DataTableFactory\TPH.Chariot.Data.Legacy.Common.DataTableFactory.csproj", "{BF71FA7D-ED3B-43AC-9ED9-A3B093A85BFA}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TPH.Chariot.Data.Legacy.DataPortal", "TPH.Chariot.Data.Legacy.DataPortal\TPH.Chariot.Data.Legacy.DataPortal.csproj", "{8AB27B58-FACD-4ACC-90C7-396CBE33EE5F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TPH.Chariot.Data.Legacy.DataPortal", "..\Data\TPH.Chariot.Data.Legacy.DataPortal\TPH.Chariot.Data.Legacy.DataPortal.csproj", "{8AB27B58-FACD-4ACC-90C7-396CBE33EE5F}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TPH.Chariot.Data.Legacy.Common.CommandFactory", "TPH.Chariot.Data.Legacy.Common.CommandFactory\TPH.Chariot.Data.Legacy.Common.CommandFactory.csproj", "{7277C756-84BE-44DC-AF45-87AA928FA6CB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TPH.Chariot.Data.Legacy.Common.CommandFactory", "..\Data\TPH.Chariot.Data.Legacy.Common.CommandFactory\TPH.Chariot.Data.Legacy.Common.CommandFactory.csproj", "{7277C756-84BE-44DC-AF45-87AA928FA6CB}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TPH.Chariot.Database.Test", "TPH.Chariot.Database.Test\TPH.Chariot.Database.Test.csproj", "{B4CB1656-8D32-41CF-AD2D-3BE4F19DE1A7}"
 EndProject

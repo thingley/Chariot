@@ -16,9 +16,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\TPH.Chariot.Data.Legacy.Common.DataTableFactory\TPH.Chariot.Data.Legacy.Common.DataTableFactory.csproj" />
-    <ProjectReference Include="..\TPH.Chariot.Data.Legacy.Common.Interfaces\TPH.Chariot.Data.Legacy.Common.Interfaces.csproj" />
-    <ProjectReference Include="..\TPH.Chariot.Data.Legacy.DataPortal\TPH.Chariot.Data.Legacy.DataPortal.csproj" />
+    <ProjectReference Include="..\..\Data\TPH.Chariot.Data.Legacy.Common.DataTableFactory\TPH.Chariot.Data.Legacy.Common.DataTableFactory.csproj" />
+    <ProjectReference Include="..\..\Data\TPH.Chariot.Data.Legacy.Common.Interfaces\TPH.Chariot.Data.Legacy.Common.Interfaces.csproj" />
+    <ProjectReference Include="..\..\Data\TPH.Chariot.Data.Legacy.DataPortal\TPH.Chariot.Data.Legacy.DataPortal.csproj" />
   </ItemGroup>
 
   <ItemGroup>
