@@ -108,7 +108,7 @@ BEGIN
 				, i.[CustomerID]
 				, i.[RV]
 				, @auditTimeStamp
-				, [sfunc].[GetAuditDescriptionForCharacterColumn]('Active', d.[Active], i.[Active])
+				, [sfunc].[GetAuditDescriptionForBooleanColumn]('Active', d.[Active], i.[Active])
 			FROM [inserted] i
 			JOIN [deleted] d ON i.[CustomerID] = d.[CustomerID]
 			WHERE i.[Active] <> d.[Active];
