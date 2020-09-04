@@ -11,7 +11,7 @@ namespace TPH.Chariot.Data.Legacy.DataPortal
 {
 	public partial class DataPortal
 	{
-		public IDataPortalResult Persist__customer__Account(DataTable customerAccountDataTable)
+		public IDataPortalResult Persist__Account(DataTable customerAccountDataTable)
 		{
 			TransactedDatabaseOperation updateAccounts = PerformUpdate;
 
@@ -23,9 +23,9 @@ namespace TPH.Chariot.Data.Legacy.DataPortal
 				SqlDataAdapter da = new SqlDataAdapter()
 				{
 					ContinueUpdateOnError = false,
-					InsertCommand = CommandFactory.customer__UP__Table__Account__Insert(connection, transaction),
-					UpdateCommand = CommandFactory.customer__UP__Table__Account__Update(connection, transaction),
-					DeleteCommand = CommandFactory.customer__UP__Table__Account__Delete(connection, transaction),
+					InsertCommand = CommandFactory.UP__Table__Account__Insert(connection, transaction),
+					UpdateCommand = CommandFactory.UP__Table__Account__Update(connection, transaction),
+					DeleteCommand = CommandFactory.UP__Table__Account__Delete(connection, transaction),
 				};
 
 				DataTable changesOnly = customerAccountDataTable.GetChanges();

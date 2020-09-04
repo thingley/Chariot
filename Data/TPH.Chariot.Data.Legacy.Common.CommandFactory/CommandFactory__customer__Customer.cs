@@ -9,7 +9,7 @@ namespace TPH.Chariot.Data.Legacy.Common.CommandFactory
 {
 	public sealed partial class CommandFactory
 	{
-        public SqlCommand customer__UP__Table__Customer__Insert(SqlConnection connection = null, SqlTransaction transaction = null)
+        public SqlCommand UP__Table__Customer__Insert(SqlConnection connection = null, SqlTransaction transaction = null)
         {
             SqlCommand cmd = new SqlCommand()
             {
@@ -34,7 +34,7 @@ namespace TPH.Chariot.Data.Legacy.Common.CommandFactory
             return cmd;
         }
 
-        public SqlCommand customer__UP__Table__Customer__Update(SqlConnection connection = null, SqlTransaction transaction = null)
+        public SqlCommand UP__Table__Customer__Update(SqlConnection connection = null, SqlTransaction transaction = null)
         {
             SqlCommand cmd = new SqlCommand()
             {
@@ -59,7 +59,7 @@ namespace TPH.Chariot.Data.Legacy.Common.CommandFactory
             return cmd;
         }
 
-        public SqlCommand customer__UP__Table__Customer__Delete(SqlConnection connection = null, SqlTransaction transaction = null)
+        public SqlCommand UP__Table__Customer__Delete(SqlConnection connection = null, SqlTransaction transaction = null)
         {
             SqlCommand cmd = new SqlCommand()
             {

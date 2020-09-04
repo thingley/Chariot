@@ -1,4 +1,4 @@
-﻿CREATE TRIGGER [customer].[TR__customer__Customer] ON [customer].[Customer] FOR DELETE, INSERT, UPDATE
+﻿CREATE TRIGGER [customer].[TR__Customer] ON [customer].[Customer] FOR DELETE, INSERT, UPDATE
 AS
 BEGIN
 	SET NOCOUNT ON;

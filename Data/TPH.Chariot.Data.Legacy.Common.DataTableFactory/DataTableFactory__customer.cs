@@ -8,7 +8,7 @@ namespace TPH.Chariot.Data.Legacy.Common.DataTableFactory
 {
 	public partial class DataTableFactory
 	{
-		public DataTable customer__Customer(string tableName = "customer__Customer")
+		public DataTable Customer(string tableName = "Customer")
         {
             DataTable dt = new DataTable(tableName);
 
@@ -19,12 +19,12 @@ namespace TPH.Chariot.Data.Legacy.Common.DataTableFactory
             dt.Columns.Add(DataColumnFactory.BitDataColumn(columnName: "Active"));
 
             dt.PrimaryKey = new DataColumn[] { dt.Columns["CustomerID"] };
-            dt.Constraints.Add(new UniqueConstraint("UQ__customer__Customer__Code", dt.Columns["Code"]));
+            dt.Constraints.Add(new UniqueConstraint("UQ__Customer__Code", dt.Columns["Code"]));
 
             return dt;
         }
 
-        public DataTable customer__Account(string tableName = "customer__Account")
+        public DataTable Account(string tableName = "Account")
         {
             DataTable dt = new DataTable(tableName);
 
@@ -36,7 +36,7 @@ namespace TPH.Chariot.Data.Legacy.Common.DataTableFactory
             dt.Columns.Add(DataColumnFactory.BitDataColumn(columnName: "Active"));
 
             dt.PrimaryKey = new DataColumn[] { dt.Columns["AccountID"] };
-            dt.Constraints.Add(new UniqueConstraint("UQ__customer__Account__CustomerID__Code", new DataColumn[] { dt.Columns["CustomerID"], dt.Columns["Code"] }));
+            dt.Constraints.Add(new UniqueConstraint("UQ__Account__CustomerID__Code", new DataColumn[] { dt.Columns["CustomerID"], dt.Columns["Code"] }));
 
             return dt;
         }
