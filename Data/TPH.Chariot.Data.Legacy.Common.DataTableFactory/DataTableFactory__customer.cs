@@ -10,7 +10,7 @@ namespace TPH.Chariot.Data.Legacy.Common.DataTableFactory
 	{
 		public DataTable Customer(string tableName = "Customer")
         {
-            DataTable dt = new DataTable(tableName);
+            DataTable dt = new DataTable(tableName: tableName, tableNamespace: "customer__Customer");
 
             dt.Columns.Add(DataColumnFactory.PrimaryKeyDataColumn(columnName: "CustomerID"));
             dt.Columns.Add(DataColumnFactory.RowVersionDataColumn());
@@ -26,7 +26,7 @@ namespace TPH.Chariot.Data.Legacy.Common.DataTableFactory
 
         public DataTable Account(string tableName = "Account")
         {
-            DataTable dt = new DataTable(tableName);
+            DataTable dt = new DataTable(tableName: tableName, tableNamespace: "customer__Account");
 
             dt.Columns.Add(DataColumnFactory.PrimaryKeyDataColumn(columnName: "AccountID"));
             dt.Columns.Add(DataColumnFactory.RowVersionDataColumn());
