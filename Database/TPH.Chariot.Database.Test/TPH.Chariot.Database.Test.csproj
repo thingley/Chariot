@@ -16,6 +16,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\Data\TPH.Chariot.Data.Legacy.Common.DataTableExtensionMethods\TPH.Chariot.Data.Legacy.Common.DataTableExtensionMethods.csproj" />
     <ProjectReference Include="..\..\Data\TPH.Chariot.Data.Legacy.Common.DataTableFactory\TPH.Chariot.Data.Legacy.Common.DataTableFactory.csproj" />
     <ProjectReference Include="..\..\Data\TPH.Chariot.Data.Legacy.Common.Interfaces\TPH.Chariot.Data.Legacy.Common.Interfaces.csproj" />
     <ProjectReference Include="..\..\Data\TPH.Chariot.Data.Legacy.DataPortal\TPH.Chariot.Data.Legacy.DataPortal.csproj" />

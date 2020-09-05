@@ -5,6 +5,7 @@ using System.Text;
 using System.Data;
 using Xunit;
 
+using TPH.Chariot.Data.Legacy.Common.DataTableExtensionMethods;
 using TPH.Chariot.Data.Legacy.Common.DataTableFactory;
 using TPH.Chariot.Data.Legacy.Common.Interfaces;
 using TPH.Chariot.Data.Legacy.DataPortal;
@@ -28,16 +29,9 @@ namespace TPH.Chariot.Database.Test
 				parentColumn: customerDataTable.Columns["CustomerID"],
 				childColumn: accountDataTable.Columns["CustomerID"]);
 
-			DataRow customerDataRow = null;
-			DataRow accountDataRow = null;
-
 			for (int customerIndex = 1; customerIndex <= 100; customerIndex++)
 			{
-				customerDataRow = customerDataTable.NewRow();
-				customerDataRow["Code"] = $"{customerIndex.ToString().PadLeft(4, '0')}";
-				customerDataRow["Customer"] = $"Customer {customerIndex.ToString().PadLeft(4, '0')}";
-				customerDataRow["Active"] = 1;
-				customerDataTable.Rows.Add(customerDataRow);
+				customerDataTable.AddCustomerRow(code: $"{customerIndex.ToString().PadLeft(4, '0')}");
 			}
 
 			IDataPortalResult result = DataPortal.Persist__Customer(customerDataTable);
@@ -49,12 +43,7 @@ namespace TPH.Chariot.Database.Test
 			{
 				for (int accountIndex = 1; accountIndex <= 3; accountIndex++)
 				{
-					accountDataRow = accountDataTable.NewRow();
-					accountDataRow["CustomerID"] = parentDataRow["CustomerID"];
-					accountDataRow["Code"] = $"{accountIndex.ToString().PadLeft(4, '0')}";
-					accountDataRow["Account"] = $"Account {accountIndex.ToString().PadLeft(4, '0')}";
-					accountDataRow["Active"] = 1;
-					accountDataTable.Rows.Add(accountDataRow);
+					accountDataTable.AddAccountRow(customerID: (long) parentDataRow["CustomerID"], code: $"{accountIndex.ToString().PadLeft(4, '0')}");
 				}
 			}
 

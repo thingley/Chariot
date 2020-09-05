@@ -13,7 +13,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TPH.Chariot.Data.Legacy.Dat
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TPH.Chariot.Data.Legacy.Common.CommandFactory", "..\Data\TPH.Chariot.Data.Legacy.Common.CommandFactory\TPH.Chariot.Data.Legacy.Common.CommandFactory.csproj", "{7277C756-84BE-44DC-AF45-87AA928FA6CB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TPH.Chariot.Database.Test", "TPH.Chariot.Database.Test\TPH.Chariot.Database.Test.csproj", "{B4CB1656-8D32-41CF-AD2D-3BE4F19DE1A7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TPH.Chariot.Database.Test", "TPH.Chariot.Database.Test\TPH.Chariot.Database.Test.csproj", "{B4CB1656-8D32-41CF-AD2D-3BE4F19DE1A7}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TPH.Chariot.Data.Legacy.Common.DataTableExtensionMethods", "..\Data\TPH.Chariot.Data.Legacy.Common.DataTableExtensionMethods\TPH.Chariot.Data.Legacy.Common.DataTableExtensionMethods.csproj", "{60370AA0-EBEE-4D47-BEF6-AC85723399C9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -47,6 +49,10 @@ Global
 		{B4CB1656-8D32-41CF-AD2D-3BE4F19DE1A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B4CB1656-8D32-41CF-AD2D-3BE4F19DE1A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B4CB1656-8D32-41CF-AD2D-3BE4F19DE1A7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{60370AA0-EBEE-4D47-BEF6-AC85723399C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{60370AA0-EBEE-4D47-BEF6-AC85723399C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{60370AA0-EBEE-4D47-BEF6-AC85723399C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{60370AA0-EBEE-4D47-BEF6-AC85723399C9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

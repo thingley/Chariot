@@ -23,7 +23,7 @@ namespace TPH.Chariot.Data.Legacy.Common.DataTableFactory
             return new DataColumn()
             {
                 ColumnName = columnName,
-                DataType = typeof(Int64),
+                DataType = typeof(long),
                 AutoIncrement = true,
                 AutoIncrementSeed = -1,
                 AutoIncrementStep = -1,
@@ -35,7 +35,7 @@ namespace TPH.Chariot.Data.Legacy.Common.DataTableFactory
             return new DataColumn()
             {
                 ColumnName = columnName,
-                DataType = typeof(Int64),
+                DataType = typeof(long),
                 DefaultValue = null,
             };
         }
