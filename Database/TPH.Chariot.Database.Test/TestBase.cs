@@ -14,8 +14,6 @@ namespace TPH.Chariot.Database.Test
 {
 	public class TestBase
 	{
-		protected delegate void TestMethod();
-
 		protected DataTableFactory DataTableFactory { get; private set; }
 		protected IDataPortal DataPortal { get; private set; }
 
@@ -30,7 +28,7 @@ namespace TPH.Chariot.Database.Test
 			DataPortal.ConnectionString = connectionString;
 		}
 
-		protected void RunTestMethod(TestMethod testMethod)
+		protected void RunTestMethod(Action testMethod)
 		{
 			try
 			{
