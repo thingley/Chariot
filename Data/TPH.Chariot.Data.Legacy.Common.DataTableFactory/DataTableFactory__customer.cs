@@ -8,7 +8,7 @@ namespace TPH.Chariot.Data.Legacy.Common.DataTableFactory
 {
 	public partial class DataTableFactory
 	{
-		public DataTable Customer(string tableName = "Customer")
+		public DataTable Customer(string tableName = "Customer", bool includeConstraints = true)
         {
             DataTable dt = new DataTable(tableName: tableName, tableNamespace: "Customer");
 
@@ -19,7 +19,11 @@ namespace TPH.Chariot.Data.Legacy.Common.DataTableFactory
             dt.Columns.Add(DataColumnFactory.BitDataColumn(columnName: "Active"));
 
             dt.PrimaryKey = new DataColumn[] { dt.Columns["CustomerID"] };
-            dt.Constraints.Add(new UniqueConstraint("UQ__Customer__Code", dt.Columns["Code"]));
+
+            if (includeConstraints)
+            {
+                dt.Constraints.Add(new UniqueConstraint("UQ__Customer__Code", dt.Columns["Code"]));
+            }
 
             return dt;
         }

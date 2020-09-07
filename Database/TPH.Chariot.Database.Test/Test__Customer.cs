@@ -9,6 +9,9 @@ using TPH.Chariot.Data.Legacy.Common.DataTableExtensionMethods;
 using TPH.Chariot.Data.Legacy.Common.DataTableFactory;
 using TPH.Chariot.Data.Legacy.Common.Interfaces;
 using TPH.Chariot.Data.Legacy.DataPortal;
+using Xunit.Sdk;
+using System.Linq.Expressions;
+using Microsoft.Data.SqlClient;
 
 namespace TPH.Chariot.Database.Test
 {
@@ -17,40 +20,47 @@ namespace TPH.Chariot.Database.Test
 		[Fact]
 		public void CreateValidCustomers()
 		{
-			DataSet dataSet = new DataSet();
-			DataTableFactory dataTableFactory = new DataTableFactory();
+			DataTable customerDataTable = DataTableFactory.Customer();
 
-			DataTable customerDataTable = dataTableFactory.Customer();
-			dataSet.Tables.Add(customerDataTable);
+			customerDataTable.AddCustomerRow(code: "AAA");
+			customerDataTable.AddCustomerRow(code: "BBB");
 
-			DataTable accountDataTable = dataTableFactory.Account();
-			dataSet.Tables.Add(accountDataTable);
-			dataSet.Relations.Add(name: "FK__Customer__Account",
-				parentColumn: customerDataTable.Columns["CustomerID"],
-				childColumn: accountDataTable.Columns["CustomerID"]);
+			RunTestMethod(() => {
+				IDataPortalResult result = DataPortal.Persist__Customer(customerDataTable);
 
-			for (int customerIndex = 1; customerIndex <= 100; customerIndex++)
-			{
-				customerDataTable.AddCustomerRow(code: $"{customerIndex.ToString().PadLeft(4, '0')}");
-			}
+				Assert.True(result.OK, $"Database operation returned error: {result.FirstErrorMessage}");
+				Assert.Equal(2, result.RowsUpdated);
+			});
+		}
 
-			IDataPortalResult result = DataPortal.Persist__Customer(customerDataTable);
+		[Fact]
+		public void CreateCustomersWithSameCode()
+		{
+			DataTable customerDataTable = DataTableFactory.Customer(includeConstraints: false);
 
-			Assert.True(result.OK, $"Database operation returned error: {result.FirstErrorMessage}");
-			Assert.Equal(100, result.RowsUpdated);
+			customerDataTable.AddCustomerRow(code: "AAA");
+			customerDataTable.AddCustomerRow(code: "AAA");
 
-			foreach (DataRow parentDataRow in customerDataTable.Rows)
-			{
-				for (int accountIndex = 1; accountIndex <= 3; accountIndex++)
-				{
-					accountDataTable.AddAccountRow(customerID: (long) parentDataRow["CustomerID"], code: $"{accountIndex.ToString().PadLeft(4, '0')}");
-				}
-			}
+			RunTestMethod(() => {
+				IDataPortalResult result = DataPortal.Persist__Customer(customerDataTable);
 
-			result = DataPortal.Persist__Account(accountDataTable);
+				Assert.False(result.OK);
+			});
+		}
 
-			Assert.True(result.OK, $"Database operation returned error: {result.FirstErrorMessage}");
-			Assert.Equal(300, result.RowsUpdated);
+		[Fact]
+		public void CreateCustomersWithSameName()
+		{
+			DataTable customerDataTable = DataTableFactory.Customer(includeConstraints: false);
+
+			customerDataTable.AddCustomerRow(code: "AAA", customer: "AAA");
+			customerDataTable.AddCustomerRow(code: "BBB", customer: "AAA");
+
+			RunTestMethod(() => {
+				IDataPortalResult result = DataPortal.Persist__Customer(customerDataTable);
+
+				Assert.False(result.OK);
+			});
 		}
 	}
 }
