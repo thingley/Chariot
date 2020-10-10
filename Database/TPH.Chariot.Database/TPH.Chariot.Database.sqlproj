@@ -126,6 +126,10 @@
     <Build Include="Schemas\tfunc.sql" />
     <Build Include="ScalarFunctions\sfunc.GetAuditDescriptionForCharacterColumn.sql" />
     <Build Include="ScalarFunctions\sfunc.GetAuditDescriptionForBooleanColumn.sql" />
+    <Build Include="Tables\data.ErrorLog.sql" />
+    <Build Include="Sequences\data.SQ__ErrorLog.sql" />
+    <Build Include="Procedures\data.UP__Table__ErrorLog__Insert.sql" />
+    <Build Include="Roles\DataWriter.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Publish\HOME.publish.xml" />

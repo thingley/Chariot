@@ -8,7 +8,9 @@ namespace TPH.Chariot.Data.Legacy.Common.Interfaces
 {
 	public interface IDataPortal
 	{
-		string ConnectionString { set; }
+		string ConnectionString { get; }
+
+		void SetConnectionString(string sqlServerInstanceName, string databaseName, string userName = "", string password = "");
 
 		IDataPortalResult Persist__Customer(DataTable customerCustomerDataTable);
 

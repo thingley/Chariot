@@ -27,7 +27,7 @@ namespace TPH.Chariot.Data.Legacy.Common.DataTableExtensionMethods
 		public static DataRow AddAccountRow(this DataTable accountDataTable, long customerID, string code, string account = null, bool active = true)
 		{
 			if (accountDataTable.Namespace != "Account")
-				throw new ArgumentException("AddCustomerRow() called against non-Account DataTable!");
+				throw new ArgumentException("AddAccountRow() called against non-Account DataTable!");
 
 			DataRow dr = accountDataTable.NewRow();
 			dr["CustomerID"] = customerID;

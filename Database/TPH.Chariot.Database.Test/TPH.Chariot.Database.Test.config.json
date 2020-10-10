@@ -1,3 +1,7 @@
 ﻿{
-	"ConnectionString": "Server=DESKTOP-E2NF7OM\\DEV2017;Database=Chariot;Trusted_Connection=True;"
+	"SQLServerInstanceName": "DESKTOP-E2NF7OM\\DEV2017",
+	"DatabaseName": "Chariot",
+	"UserName": "",
+	"Password": "",
+	"DatabaseBackupFolderPath": "D:\\TEMP\\BACKUP"
 }

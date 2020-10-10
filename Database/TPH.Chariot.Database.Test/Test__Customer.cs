@@ -1,17 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 using System.Data;
 using Xunit;
+using Xunit.Sdk;
 
 using TPH.Chariot.Data.Legacy.Common.DataTableExtensionMethods;
 using TPH.Chariot.Data.Legacy.Common.DataTableFactory;
 using TPH.Chariot.Data.Legacy.Common.Interfaces;
-using TPH.Chariot.Data.Legacy.DataPortal;
-using Xunit.Sdk;
-using System.Linq.Expressions;
-using Microsoft.Data.SqlClient;
 
 namespace TPH.Chariot.Database.Test
 {
@@ -20,12 +15,12 @@ namespace TPH.Chariot.Database.Test
 		[Fact]
 		public void CreateValidCustomers()
 		{
-			DataTable customerDataTable = DataTableFactory.Customer();
-
-			customerDataTable.AddCustomerRow(code: "AAA");
-			customerDataTable.AddCustomerRow(code: "BBB");
-
 			RunTestMethod(() => {
+				DataTable customerDataTable = DataTableFactory.Customer();
+
+				customerDataTable.AddCustomerRow(code: "AAA");
+				customerDataTable.AddCustomerRow(code: "BBB");
+
 				IDataPortalResult result = DataPortal.Persist__Customer(customerDataTable);
 
 				Assert.True(result.OK, $"Database operation returned error: {result.FirstErrorMessage}");
@@ -36,12 +31,12 @@ namespace TPH.Chariot.Database.Test
 		[Fact]
 		public void CreateCustomersWithSameCode()
 		{
-			DataTable customerDataTable = DataTableFactory.Customer(includeConstraints: false);
-
-			customerDataTable.AddCustomerRow(code: "AAA");
-			customerDataTable.AddCustomerRow(code: "AAA");
-
 			RunTestMethod(() => {
+				DataTable customerDataTable = DataTableFactory.Customer(includeConstraints: false);
+
+				customerDataTable.AddCustomerRow(code: "AAA");
+				customerDataTable.AddCustomerRow(code: "AAA");
+
 				IDataPortalResult result = DataPortal.Persist__Customer(customerDataTable);
 
 				Assert.False(result.OK);
@@ -51,12 +46,12 @@ namespace TPH.Chariot.Database.Test
 		[Fact]
 		public void CreateCustomersWithSameName()
 		{
-			DataTable customerDataTable = DataTableFactory.Customer(includeConstraints: false);
-
-			customerDataTable.AddCustomerRow(code: "AAA", customer: "AAA");
-			customerDataTable.AddCustomerRow(code: "BBB", customer: "AAA");
-
 			RunTestMethod(() => {
+				DataTable customerDataTable = DataTableFactory.Customer(includeConstraints: false);
+
+				customerDataTable.AddCustomerRow(code: "AAA", customer: "AAA");
+				customerDataTable.AddCustomerRow(code: "BBB", customer: "AAA");
+
 				IDataPortalResult result = DataPortal.Persist__Customer(customerDataTable);
 
 				Assert.False(result.OK);

@@ -28,7 +28,7 @@ namespace TPH.Chariot.Data.Legacy.Common.DataTableFactory
             return dt;
         }
 
-        public DataTable Account(string tableName = "Account")
+        public DataTable Account(string tableName = "Account", bool includeConstraints = true)
         {
             DataTable dt = new DataTable(tableName: tableName, tableNamespace: "Account");
 
@@ -40,7 +40,12 @@ namespace TPH.Chariot.Data.Legacy.Common.DataTableFactory
             dt.Columns.Add(DataColumnFactory.BitDataColumn(columnName: "Active"));
 
             dt.PrimaryKey = new DataColumn[] { dt.Columns["AccountID"] };
-            dt.Constraints.Add(new UniqueConstraint("UQ__Account__CustomerID__Code", new DataColumn[] { dt.Columns["CustomerID"], dt.Columns["Code"] }));
+
+            if (includeConstraints)
+            {
+                dt.Constraints.Add(new UniqueConstraint("UQ__Account__CustomerID__Code", new DataColumn[] { dt.Columns["CustomerID"], dt.Columns["Code"] }));
+                dt.Constraints.Add(new UniqueConstraint("UQ__Account__CustomerID__Account", new DataColumn[] { dt.Columns["CustomerID"], dt.Columns["Account"] }));
+            }
 
             return dt;
         }
