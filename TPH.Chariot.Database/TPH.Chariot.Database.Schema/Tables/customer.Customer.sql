@@ -12,5 +12,5 @@
 	, CONSTRAINT [UQ__customer__Customer__Name]			UNIQUE NONCLUSTERED ([Name])
 
 	, CONSTRAINT [CH__customer__Customer__Code]			CHECK (LEN([Code]) > 0)
-	, CONSTRAINT [CH__customer__Customer__Customer]		CHECK (LEN([Name]) > 0)
+	, CONSTRAINT [CH__customer__Customer__Name]			CHECK (LEN([Name]) > 0)
 );
