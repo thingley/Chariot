@@ -69,5 +69,10 @@
     <Build Include="UserDataTypes\type.EntityName.sql" />
     <Build Include="Tables\customer.Customer.sql" />
     <Build Include="Sequences\customer.SQ__Customer.sql" />
+    <Build Include="Sequences\customer.SQ__Account.sql" />
+    <Build Include="Tables\customer.Account.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="TPH.Chariot.Database.Schema.publish.xml" />
   </ItemGroup>
 </Project>
