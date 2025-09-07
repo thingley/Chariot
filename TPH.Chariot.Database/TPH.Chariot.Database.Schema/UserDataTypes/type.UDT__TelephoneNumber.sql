@@ -1,0 +1,1 @@
+﻿CREATE TYPE [type].[UDT__TelephoneNumber] FROM NVARCHAR(20) NOT NULL;

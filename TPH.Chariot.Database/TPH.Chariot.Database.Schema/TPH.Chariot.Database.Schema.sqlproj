@@ -65,12 +65,27 @@
   <ItemGroup>
     <Build Include="Schema\customer.sql" />
     <Build Include="Schema\type.sql" />
-    <Build Include="UserDataTypes\type.EntityCode.sql" />
-    <Build Include="UserDataTypes\type.EntityName.sql" />
+    <Build Include="UserDataTypes\type.UDT__EntityCode.sql" />
+    <Build Include="UserDataTypes\type.UDT__EntityName.sql" />
     <Build Include="Tables\customer.Customer.sql" />
     <Build Include="Sequences\customer.SQ__Customer.sql" />
     <Build Include="Sequences\customer.SQ__Account.sql" />
     <Build Include="Tables\customer.Account.sql" />
+    <Build Include="Sequences\customer.SQ__Profile.sql" />
+    <Build Include="Tables\customer.Profile.sql" />
+    <Build Include="Sequences\customer.SQ__Person.sql" />
+    <Build Include="Schema\system.sql" />
+    <Build Include="Sequences\system.SQ__TelephoneCountryCode.sql" />
+    <Build Include="Tables\system.TelephoneCountryCode.sql" />
+    <Build Include="Tables\customer.Person.sql" />
+    <Build Include="UserDataTypes\type.UDT__PersonTitle.sql" />
+    <Build Include="UserDataTypes\type.UDT__PersonForename.sql" />
+    <Build Include="UserDataTypes\type.UDT__PersonSurname.sql" />
+    <Build Include="Sequences\customer.SQ__ContactDetails.sql" />
+    <Build Include="Tables\customer.ContactDetails.sql" />
+    <Build Include="UserDataTypes\type.UDT__TelephoneNumber.sql" />
+    <Build Include="UserDataTypes\type.UDT__Email.sql" />
+    <Build Include="UserDataTypes\type.UDT__Note.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="TPH.Chariot.Database.Schema.publish.xml" />

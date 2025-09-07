@@ -1,0 +1,1 @@
+﻿CREATE TYPE [type].[UDT__Email] FROM NVARCHAR(100) NOT NULL;

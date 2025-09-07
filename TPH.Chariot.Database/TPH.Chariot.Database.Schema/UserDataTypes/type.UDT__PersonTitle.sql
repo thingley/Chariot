@@ -1,0 +1,1 @@
+﻿CREATE TYPE [type].[UDT__PersonTitle] FROM NVARCHAR(50) NOT NULL;

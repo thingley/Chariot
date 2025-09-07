@@ -1,0 +1,1 @@
+﻿CREATE TYPE [type].[UDT__Note] FROM NVARCHAR(200) NOT NULL;
